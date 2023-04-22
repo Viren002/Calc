@@ -31,21 +31,21 @@ window.onload = function () {
 
     let val = elem.value;
 
-    const span = document.createElement("span");
+//     const span = document.createElement("span");
     // const btnId = elem.target.id;
 
-    span.className = "rpleSpan";
+//     span.className = "rpleSpan";
 
     //  span.style.width = "100px";
     //  span.style.height = "100px";
 
-    span.style.animation = "ripple 400ms linear";
+//     span.style.animation = "ripple 400ms linear";
 
-    elem.appendChild(span);
+//     elem.appendChild(span);
 
-    setTimeout(() => {
-      span.remove();
-    }, 4000);
+//     setTimeout(() => {
+//       span.remove();
+//     }, 4000);
 
     result_box.textContent += val;
 
