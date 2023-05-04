@@ -52,21 +52,7 @@ window.onload = function () {
     event.stopPropagation();
   });
 
-  numbers_btn2.addEventListener("click", (e) => {
-    // this is for Arithmatic Symbols
-
-    var ids2 = e.target.id;
-    var elem2 = document.getElementById(ids2);
-
-    /*  setTimeout((elem2)=>{
-            elem2.Style.backgroundColor = "darkgrey";
-      elem2.style.opacity ="0.8";
-     }
-   ,0100);  */
-
-    let btn_val = e.target.value;
-
-    if (btn_val === "=") {
+  if (val === "=") {
     
       let resultBox = result_box.textContent;
 
@@ -74,16 +60,76 @@ window.onload = function () {
 
       let final_Ans = Main_Evaluation(postfixString);
 
+      let hstry_box = document.querySelector(".History");
+
+     
       result_box.textContent = final_Ans;
+
+      let div_hstry = document.createElement('div');
+      div_hstry.className = 'hstry_div';
+      hstry_box.append(div_hstry);
+
+      let para1_hstry = document.createElement('p');
+      para1_hstry.append(resultBox)
+
+
+
+      let para2_hstry = document.createElement('p');
+      para2_hstry.append(final_Ans);
+
+      div_hstry.append(para1_hstry);
+      div_hstry.append(para2_hstry);
+
+      // hstry_box.append(resultBox);
+      // hstry_box.append(final_Ans);
+
     }
-    else if(btn_val=== "cl"){
+    else if(val=== "AC"){
       result_box.textContent = "";
-    } else {
-      result_box.textContent += btn_val;
+    } 
+    else{
+      result_box.textContent += val;
     }
 
-    e.stopPropagation();
+  
+
+
+    event.stopPropagation();
   });
+
+  
+//   numbers_btn2.addEventListener("click", (e) => {
+//     // this is for Arithmatic Symbols
+
+//     var ids2 = e.target.id;
+//     var elem2 = document.getElementById(ids2);
+
+//     /*  setTimeout((elem2)=>{
+//             elem2.Style.backgroundColor = "darkgrey";
+//       elem2.style.opacity ="0.8";
+//      }
+//    ,0100);  */
+
+//     let btn_val = e.target.value;
+
+//     if (btn_val === "=") {
+    
+//       let resultBox = result_box.textContent;
+
+//       let postfixString = Main_Postix(resultBox);
+
+//       let final_Ans = Main_Evaluation(postfixString);
+
+//       result_box.textContent = final_Ans;
+//     }
+//     else if(btn_val=== "cl"){
+//       result_box.textContent = "";
+//     } else {
+//       result_box.textContent += btn_val;
+//     }
+
+//     e.stopPropagation();
+//   });
 
   const hstryBtn = document.querySelector(".hstryBtn");
 
