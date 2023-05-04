@@ -1,0 +1,320 @@
+*{
+    margin: 0 0 ;
+    padding: 0 0;
+}
+body{
+    background-color: rgb(24, 24, 24);
+}
+
+.result_box{
+    font-size: 30px;
+    width: 96vw;
+    height: 40px;
+    /* max-width: 98vw; */
+    /* max-height: 40px; */
+    /* margin-top: 10px ; */
+    margin: 10px 17px;
+    /* background-color: rgb(218, 216, 216); */
+    color: rgb(250, 248, 248);
+    background-color: #424242;
+    font-family: 'Roboto', sans-serif;
+    border-radius: 0.25rem;
+    border: 10px thin white;
+      
+    padding: 0.5rem 0.6rem;
+ 
+  
+}
+.result_box ::placeholder {
+    color: white;
+    font-size: 30px;
+    font-family: 'Roboto', sans-serif;
+      
+}
+
+.Main-box{
+    /* background-color: orange; */
+    display:block;
+    /* display: flex; */
+    block-size: 600px;
+    position: relative;
+     width: 400px;
+    height: 490px; 
+   
+     /* gap: 20px; */
+     margin: 10px;
+     block-size: 400px;
+   justify-content: center;
+    padding-left: 10px;
+    margin-left: 30px;
+}
+
+/* .btns1{
+    display: inline-block;
+} */
+
+.inputBtn{
+    /* position: relative; */
+    /* width: 100px;
+    height: 100px; */
+
+    width: 80px;
+    height: 80px;
+    overflow: hidden;
+    transition: background 400ms;
+    color: rgb(250, 248, 248);
+    background-color: #424242;
+  
+   
+    padding: 1rem 2.5rem;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.5rem;
+    align-items: center;
+    outline: 0;
+    border: 0;
+    border-radius: 0.25rem;
+    box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.3); /* black with 30% opacity */
+    cursor: pointer;
+  
+
+    margin: 2px;
+    
+    /* overflow: hidden;
+    background-color: darkgrey;
+    color: rgb(59, 59, 59);
+    font-size: 1.3em; */
+  
+}
+
+.History{
+  
+    visibility: hidden;
+  
+    width: 400px;
+    
+    height: 100%;
+    backdrop-filter: blur(10px);
+    
+ 
+    position: absolute;
+    top: 50px;
+ 
+    left: 0px;
+    margin-top: 10px;
+    
+    color:white;
+    background-color: #424242;
+    border: 0.001rem thin white;
+
+    text-align: center;
+  
+    transition: transform 0.5s ease-out; 
+     transform: translateX(-300px);
+     overflow: auto;
+}
+
+.hstryBtn{
+  
+    width:96px;
+    height: 48px;
+  
+    color: white;
+    background-color: #424242;
+    font-size: 3em;
+    position: absolute;
+    /* position: relative; */
+    border: 0;
+    outline: 0;
+    transition: transform 0.3s ease;
+    
+}
+
+.hstry_div{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    border-top: 0.001rem solid white;
+
+    border-bottom: 0.001rem solid white;
+    outline: 0;
+    margin-top: 10px;
+}
+
+p{
+   text-align: right;
+   font-size: 1.5em;
+   margin-right: 10px;
+   margin-top: 5px;
+   margin-bottom: 5px;
+}
+
+
+@media screen and (max-width: 480px){
+
+    .result_box{
+        width: 90vw;
+        /* min-width: 95vw; */
+        max-width: 100vw;
+        height: 120px;
+        /* max-height: 80px; */
+
+        margin: 20px 10px;
+    }
+
+    .Main_box{
+        display: flex;
+
+        /* margin-left: 39px;
+        margin-right: 10px; */
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 50px;
+        /* margin-top: auto; */
+        /* margin: 10px auto; */
+    }
+
+    .btns1{
+        display: grid;
+        /* grid-gap: 40px; */
+        /* grid-row-gap: 37px; */
+        /* grid-column-gap: 61px; */
+    
+        grid-template-columns: repeat(4,0.1fr);
+        /* grid-template-rows: repeat(4, 1fr); */
+        /* padding: 0px 43px; */
+        /* padding: 40px 0px; */
+
+        /* justify-content: center;
+        align-content: center; */
+        /* margin-top: 10em; */
+        /* margin-left: 23px;
+        margin-right: 0px; */
+        margin-top: auto;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+
+    /* .inputBtn{
+        width: 44px;
+        height: 44px;
+        /* align-content: center; 
+    } */
+}
+    @media screen and (min-width: 720px) and (max-width: 1023px) 
+    /* (max-width: 900px) */
+     {
+
+        .result_box{
+            width: 85vw;
+            height: 180px;
+            margin-top: 25px;
+
+            font-size: 3em;
+            overflow: auto;
+            margin-left: auto;
+            margin-right: auto;
+            /* min-height: 800px;
+            max-height: 990px; */
+        }
+
+        .Main_box{
+            display: flex;
+
+            /* margin-left: 39px;
+            margin-right: 10px; */
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 50px;
+            /* margin: 10px auto; */
+        }
+
+        .btns1{
+            display: grid;
+            grid-template-columns: repeat(4,0.1fr);
+
+            /* margin-left: 10px; */
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .inputBtn{
+            width: 160px;
+            height: 160px;
+
+            font-size: 2.7em;
+        }
+
+        /* .multi{
+            grid-column: 4/4; 
+            grid-row: 1;
+        }
+
+        .divi{
+            grid-column: 4/4; 
+            grid-row: 2;
+        }
+
+        .minus{
+            grid-column: 4/4; 
+            grid-row: 3;
+        }
+
+        .add{
+            grid-column: 4/4; 
+            grid-row: 4;
+        } */
+    }
+
+    @media screen and (min-width: 1024px){
+
+        .result_box{
+            width: 90vw;
+            height: 100px; 
+
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .Main_box{
+            display: flex;
+
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 50px;
+        }
+
+        .btns1{
+            display: grid;
+
+            grid-template-columns: repeat(4,2fr);
+
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .inputBtn{
+            width: 100px;
+            height: 100px;
+        }
+    }
+
+    .multi{
+        grid-column: 4/4; 
+        grid-row: 1;
+    }
+
+    .divi{
+        grid-column: 4/4; 
+        grid-row: 2;
+    }
+
+    .minus{
+        grid-column: 4/4; 
+        grid-row: 3;
+    }
+
+    .add{
+        grid-column: 4/4; 
+        grid-row: 4;
+    }
