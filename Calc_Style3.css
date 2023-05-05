@@ -22,6 +22,7 @@ body{
     border: 10px thin white;
       
     padding: 0.5rem 0.6rem;
+    overflow: auto;
  
   
 }
