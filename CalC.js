@@ -7,23 +7,9 @@ window.onload = function () {
 
   let result_box = document.querySelector(".result_box");
 
-  // var Span = document.createElement('span');
-  //    Span.className = "rpleSpan";
+  const main_box = document.querySelector('#Main_box');
 
-  //       Span.style.animation="ripple 400ms ease";
-
-  // span.style.animation = "ripple 400ms linear";
-
-  // elem.appendChild(span);
-
-  // setTimeout(()=>{
-  //   span.remove();
-  // },4000);
-
-  // event.stopPropagation();
-
-  // }
-
+ 
   numbers_btn.addEventListener("click", (event) => {
     // this is for numbers pad
     var ids = event.target.id;
@@ -31,26 +17,12 @@ window.onload = function () {
 
     let val = elem.value;
 
-//     const span = document.createElement("span");
+    
     // const btnId = elem.target.id;
 
-//     span.className = "rpleSpan";
-
-    //  span.style.width = "100px";
-    //  span.style.height = "100px";
-
-//     span.style.animation = "ripple 400ms linear";
-
-//     elem.appendChild(span);
-
-//     setTimeout(() => {
-//       span.remove();
-//     }, 4000);
-
-//     result_box.textContent += val;
-
-//     event.stopPropagation();
     
+    
+
     if (val === "=") {
     
       let resultBox = result_box.textContent;
@@ -94,45 +66,9 @@ window.onload = function () {
 
 
     event.stopPropagation();
- 
-
   });
 
   
-  
-//   numbers_btn2.addEventListener("click", (e) => {
-//     // this is for Arithmatic Symbols
-
-//     var ids2 = e.target.id;
-//     var elem2 = document.getElementById(ids2);
-
-//     /*  setTimeout((elem2)=>{
-//             elem2.Style.backgroundColor = "darkgrey";
-//       elem2.style.opacity ="0.8";
-//      }
-//    ,0100);  */
-
-//     let btn_val = e.target.value;
-
-//     if (btn_val === "=") {
-    
-//       let resultBox = result_box.textContent;
-
-//       let postfixString = Main_Postix(resultBox);
-
-//       let final_Ans = Main_Evaluation(postfixString);
-
-//       result_box.textContent = final_Ans;
-//     }
-//     else if(btn_val=== "cl"){
-//       result_box.textContent = "";
-//     } else {
-//       result_box.textContent += btn_val;
-//     }
-
-//     e.stopPropagation();
-//   });
-
   const hstryBtn = document.querySelector(".hstryBtn");
 
   hstryBtn.addEventListener("click", (Eh) => {
@@ -144,29 +80,36 @@ window.onload = function () {
       hstryBox.style.transform = "translateX(0px)";
 
       hstryBox.style.visibility = "visible";
-      hstryBox.style.height = "92.4vh";
-      hstryBox.style.width = "25vw";
+      // hstryBox.style.display = "block";
 
-      hstryBox.style.transition = "transform 0.5s ease-out";
+      hstryBox.style.height = "92.4vh";
+      // hstryBox.style.width = "25vw";
+      hstryBox.style.width = "350px";
+
+      hstryBox.style.transition = "transform 0.3s ease-out";
 
       hstryBtn.style.transform = "rotate(-180deg)";
 
       Eh.target.value = "open";
-    } else {
-      hstryBox.style.transition = "transform 0.5s ease-out";
+    } 
+    else {
+      hstryBox.style.transition = "transform 0.3s ease-out";
 
       hstryBox.style.transform = "translateX(-300px)";
+      // hstryBox.style.transform = "translateX(180px)";
 
       hstryBox.style.visibility = "hidden";
+      // hstryBox.style.display = "none";
 
       hstryBox.style.height = "0vh";
       hstryBox.style.width = "0vw";
 
-      hstryBtn.style.transform = "rotate(+180deg)";
+      hstryBtn.style.transform = "rotate(0deg)";
       Eh.target.value = "close";
     }
   });
 
+  
   // =================================================
   // =================================================
   // Below codes are for postfix conversion and evaluation
@@ -289,7 +232,7 @@ function Main_Postix(Orgn_str){
   } // Postfix convert function ends here .
   
 
-  let postfix_str =   postfix_conv(NewStr,ln);
+     let postfix_str =   postfix_conv(NewStr,ln);
      return postfix_str; 
   } /// Main_Postfix function ends here .
   
@@ -297,6 +240,7 @@ function Main_Postix(Orgn_str){
   console.log("Postfix String = ");
   // console.log(postfixString);
   
+  // ===================================================
   // From below , codes are for evaluating
   
   function Main_Evaluation(PostfixString){
