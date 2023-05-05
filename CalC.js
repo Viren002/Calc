@@ -47,12 +47,11 @@ window.onload = function () {
 //       span.remove();
 //     }, 4000);
 
-    result_box.textContent += val;
+//     result_box.textContent += val;
 
-    event.stopPropagation();
-  });
-
-  if (val === "=") {
+//     event.stopPropagation();
+    
+    if (val === "=") {
     
       let resultBox = result_box.textContent;
 
@@ -95,8 +94,11 @@ window.onload = function () {
 
 
     event.stopPropagation();
+ 
+
   });
 
+  
   
 //   numbers_btn2.addEventListener("click", (e) => {
 //     // this is for Arithmatic Symbols
