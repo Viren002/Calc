@@ -157,7 +157,8 @@ function Main_Postix(Orgn_str){
       if (
         (NewStr[i] >= "0" && NewStr <= "9") ||
         (NewStr[i] >= "a" && NewStr <= "b") ||
-        (NewStr[i] >= "A" && NewStr <= "B")
+        (NewStr[i] >= "A" && NewStr <= "B") ||
+          NewStr[i] === "." 
       ) {
         // stck.push(NewStr[i]);
         opStr += NewStr[i];
@@ -301,6 +302,46 @@ function Main_Postix(Orgn_str){
         resultStck.push(num);
         //  num = 0;
       }
+      
+        else if(postfixString[i]==='.'){  // This part adds real and float part of a number .
+
+          i++;
+          let bfrDcml = 0;
+          let dcmlLn = 0;  // Length of float part of a num 
+          num = 0;
+          chr = postfixString[i];
+          while(chr>='0' && chr<='9'){
+
+            num = num*10 + (chr-'0');
+
+            i++;
+            chr = postfixString[i];
+
+            dcmlLn++;
+          }
+          // console.log("dcmlLn = ",dcmlLn);
+
+          while(dcmlLn>0){
+
+            num = num/10;
+            dcmlLn--;
+          }
+
+          // console.log("Decimal part = ",num);
+
+          bfrDcml = resultStck.pop();
+
+          num = bfrDcml  + num;
+          // console.log("Whole num = ",num);
+
+
+          resultStck.push(num);
+
+          // i--;
+
+
+
+        }   
        else {
        
         scnd = resultStck.pop();
